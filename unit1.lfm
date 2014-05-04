@@ -1,0 +1,128 @@
+object Form1: TForm1
+  Left = 587
+  Height = 424
+  Top = 224
+  Width = 376
+  BorderStyle = bsSingle
+  Caption = 'Form1'
+  ClientHeight = 424
+  ClientWidth = 376
+  Menu = MainMenu
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.0.14.0'
+  object Panel1: TPanel
+    Left = 8
+    Height = 408
+    Top = 8
+    Width = 360
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    Caption = 'Panel1'
+    ClientHeight = 408
+    ClientWidth = 360
+    TabOrder = 0
+    object Memo1: TMemo
+      Left = 8
+      Height = 272
+      Top = 88
+      Width = 344
+      Lines.Strings = (
+        'Memo1'
+      )
+      TabOrder = 0
+    end
+    object LabelKodLotniska: TLabel
+      Left = 16
+      Height = 18
+      Top = 56
+      Width = 89
+      Caption = 'Kod lotniska:'
+      ParentColor = False
+    end
+    object ComboBox1: TComboBox
+      Left = 8
+      Height = 29
+      Top = 16
+      Width = 189
+      ItemHeight = 0
+      OnChange = ComboBox1Change
+      TabOrder = 1
+    end
+    object Edit2: TEdit
+      Left = 117
+      Height = 27
+      Top = 47
+      Width = 80
+      TabOrder = 2
+      Text = 'Edit2'
+    end
+    object ButtonLoad: TButton
+      Left = 200
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Wczytaj'
+      OnClick = ButtonLoadClick
+      TabOrder = 3
+    end
+    object Edit1: TEdit
+      Left = 277
+      Height = 27
+      Top = 16
+      Width = 75
+      TabOrder = 4
+      Text = 'Edit1'
+    end
+    object ButtonCopy: TButton
+      Left = 200
+      Height = 24
+      Top = 48
+      Width = 152
+      Caption = 'Skopiuj do schowka'
+      OnClick = ButtonCopyClick
+      TabOrder = 5
+    end
+    object ButtonPodajKod: TButton
+      Left = 8
+      Height = 29
+      Top = 368
+      Width = 187
+      AutoSize = True
+      Caption = 'Podaj kod lotniska ręcznie'
+      OnClick = ButtonPodajKodClick
+      TabOrder = 6
+    end
+    object ButtonClose: TButton
+      Left = 280
+      Height = 24
+      Top = 373
+      Width = 72
+      Caption = 'Zamknij'
+      OnClick = ButtonCloseClick
+      TabOrder = 7
+    end
+  end
+  object MainMenu: TMainMenu
+    left = 168
+    top = 192
+    object MenuItem1: TMenuItem
+      Caption = 'Ustawienia'
+      object MenuItem2: TMenuItem
+        Caption = 'O programie'
+        OnClick = MenuItem2Click
+      end
+    end
+  end
+  object HTTPClient: TLHTTPClientComponent
+    OnDoneInput = HTTPClientDoneInput
+    OnInput = HTTPClientInput
+    OnProcessHeaders = HTTPClientProcessHeaders
+    OnDisconnect = HTTPClientDisconnect
+    OnError = HTTPClientError
+    Timeout = 0
+    left = 168
+    top = 240
+  end
+end

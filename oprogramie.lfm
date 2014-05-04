@@ -1,0 +1,69 @@
+object Form2: TForm2
+  Left = 907
+  Height = 313
+  Top = 264
+  Width = 314
+  BorderStyle = bsSingle
+  Caption = 'Form2'
+  ClientHeight = 313
+  ClientWidth = 314
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '1.0.12.0'
+  object Panel1: TPanel
+    Left = 8
+    Height = 296
+    Top = 8
+    Width = 296
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    Caption = 'Panel1'
+    ClientHeight = 296
+    ClientWidth = 296
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 8
+      Height = 16
+      Top = 8
+      Width = 280
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Pogoda 0.5'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Memo1: TMemo
+      Left = 8
+      Height = 232
+      Top = 24
+      Width = 281
+      BorderStyle = bsNone
+      Color = clForm
+      Lines.Strings = (
+        'Memo1'
+      )
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object Button1: TButton
+      Left = 8
+      Height = 29
+      Top = 264
+      Width = 184
+      AutoSize = True
+      Caption = 'Pobierz najnowszą wersję'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+  end
+  object ButtonClose: TButton
+    Left = 224
+    Height = 25
+    Top = 272
+    Width = 75
+    Caption = 'Zamknij'
+    OnClick = ButtonCloseClick
+    TabOrder = 0
+  end
+end
